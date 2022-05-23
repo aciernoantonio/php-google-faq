@@ -163,26 +163,66 @@ $contents = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    
 
 </head>
 <body>
 
 
+    <header>
 
-        <?php 
-            foreach ($contents as $content) { ?>
-            <h2><?php echo $content['question'] ?></h2>
+        <div class="container">
+
+            <div class="logo_section">
+                <img class="logo" src="https://1000marche.net/wp-content/uploads/2020/03/Google-logo.png" alt="">
+                <span class=" ms-3 text-muted">Privacy & Termini</span>
+            </div>
+
+            <nav>
+
+                <ul class="d-flex list-unstyled">
+                    <li class="me-3">Introduzione</li>
+                    <li class="me-3">Norme sulla privacy</li>
+                    <li class="me-3">Termini di servizio</li>
+                    <li class="me-3">Tecnologie</li>
+                    <li class="active">Domande Frequenti</li>
+                </ul>
+
+            </nav>
+
+        </div>
+
+        
+
+    </header>
+
+
+    <main class="mt-5">
+
+        <div class="container">
 
             <?php 
-                foreach ($content['answer'] as $faqAnswer) { ?>
-                <p><?php echo $faqAnswer ?></p>
+                foreach ($contents as $content) { ?>
+                <h5 class="pt-5"><?php echo $content['question'] ?></h5>
+
+                <?php 
+                    foreach ($content['answer'] as $faqAnswer) { ?>
+                    <p class="mt-4"><?php echo $faqAnswer ?></p>
+
+                <?php } ?>
+
 
             <?php } ?>
 
+        </div>
 
-        <?php } ?>
+        
+
+    </main>
+
+        
     
 </body>
 </html>

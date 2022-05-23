@@ -1,0 +1,19 @@
+.logo{
+    width: 80px;
+}
+
+ul {
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.active{
+    color: dodgerblue;
+    border-bottom: 3px solid dodgerblue;
+    padding-bottom: 1rem;
+}
+
+main > .container{
+    width: 800px;
+    margin: auto;
+}
